@@ -4,7 +4,7 @@ open class vehiculoSkyline(
     var aceleracion: Int,
     var frenado: Int,
     var combustible: Int,
-        var distanciaRecorrida: Int,
+    var distanciaRecorrida: Int,
 
 
 ) {

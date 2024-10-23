@@ -4,8 +4,8 @@ class Moto (
     aceleracion: Int,
     frenado: Int,
     combustible: Int,
-    avanzar: Int,
-):vehiculoSkyline(velocidad, velocidad_maxima=180, aceleracion=20, frenado=15, combustible=60,avanzar){
+    distanciaRecorrida: Int,
+):vehiculoSkyline(velocidad, velocidad_maxima=180, aceleracion=20, frenado=15, combustible=60,distanciaRecorrida){
 
 
 
