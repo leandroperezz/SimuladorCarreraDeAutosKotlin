@@ -4,18 +4,18 @@ open class vehiculoSkyline(
     var aceleracion: Int,
     var frenado: Int,
     var combustible: Int,
-    var avanzar: Int,
+        var distanciaRecorrida: Int,
 
 
 ) {
-    var velocidad_actual:Int=0
+    var velocidadActual:Int=0
 
-    open fun acelerar{
+    open fun acelerar(){
         if (combustible>0){
-            println("La velocidad actual es $velocidad_actual")
-            velocidad_actual += aceleracion
-            if (velocidad_actual>velocidad_maxima){
-                velocidad_actual=velocidad_maxima
+            println("La velocidad actual es $velocidadActual")
+            velocidadActual += aceleracion
+            if (velocidadActual>velocidad_maxima){
+                velocidadActual=velocidad_maxima
                 combustible -= 1
 
             }
@@ -23,17 +23,17 @@ open class vehiculoSkyline(
             println("ERROR:DESTRUCCION INMINENTE")
         }
     }
-    open fun frenar{
-        if (velocidad_actual>frenado){
-            velocidad_actual -= frenado
+    open fun frenar(){
+        if (velocidadActual>frenado){
+            velocidadActual -= frenado
 
         }else{
-            velocidad_actual=0
+            velocidadActual=0
         }
     }
 
-    open fun avanzar{
-        avanzar += velocidad_actual
+    open fun distancia_Recorrida(){
+        distanciaRecorrida += velocidadActual
     }
 
 

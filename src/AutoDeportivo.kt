@@ -5,7 +5,7 @@ class AutoDeportivo (
     frenado: Int,
     combustible: Int,
     avanzar: Int,
-): vehiculoCustom(velocidad,velocidad_maxima=220, combustible=80, aceleracion=15, frenado=10, avanzar) {
+): vehiculoSkyline(velocidad,velocidad_maxima=220, combustible=80, aceleracion=15, frenado=10, avanzar = avanzar) {
 
 
 
