@@ -1,19 +1,15 @@
-import kotlin.math.roundToInt
 
-class PistaPersonalizadaGap(
-    var clima: String,
-    velocidad: Int,
-    distanciaRecorrida: Int,
-    combustible: Int
 
-):vehiculoSkyline(velocidad,combustible)
+open class PistaPersonalizadaGap(
+    longitud:Int,
+    clima:String,
+):Pista(longitud,clima)
 {
-    open fun aplicarCondiciones(vehiculo: Vehiculo){
+    fun aplicarCondiciones(vehiculo: Vehiculo){
         when (clima){
-            "lloviendo" -> velocidadActual= (velocidadActual-(velocidadActual*0.5)).roundToInt()
-            "niebla" -> velocidadActual= (velocidadActual-(velocidadActual*0.8)).roundToInt()
-            "soleado" -> combustible *= 0.95
-            "normal"  -> {}
+            "lloviendo" -> velocidadActual= (velocidadActual-(velocidadActual*0.5)).toInt()
+            "niebla" -> velocidadActual= (velocidadActual-(velocidadActual*0.8)).toInt()
+            "soleado" -> combustible *= (0.95).toInt()
 
         }
     }
